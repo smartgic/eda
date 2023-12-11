@@ -20,3 +20,4 @@ tests/integration/event_source_kafka/*.jks
 
 # Builds
 *.tar.gz
+context
