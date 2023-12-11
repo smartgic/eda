@@ -11,6 +11,6 @@
 
   rules:
     - name: Check for message type
-      condition: event.type == "ovos-skill-personal.OpenVoiceOS.activate"
+      condition: event.type == "ovos-skill-personal.OpenVoiceOS:WhoMadeYou.intent"
       action:
         debug:
