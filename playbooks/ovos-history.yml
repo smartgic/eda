@@ -1,0 +1,28 @@
+---
+- name: Open Voice OS history
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+    _user_name: "{{ name | default('Foo') }}"
+    _ovos_history_content: >-
+      Hey {{ _user_name }}, thanks for asking about the Open Voice OS history!
+
+
+      Open Voice OS is a free and open source personal assistant and smart speaker that offers a
+      powerful and flexible alternative to proprietary solutions like Amazon™ Alexa™, Google Assistant™,
+      Microsoft Cortana™ or Apple's Siri™.
+
+
+      At the same time, it is also an open virtual assistant platform that enables developers and organizations
+      to create custom voice-controlled applications. With its cutting-edge technology and user-friendly design,
+      Open Voice OS is revolutionizing the way we interact with technology.
+
+  tasks:
+    - name: Send a message to the Discord channel
+      community.general.discord:
+        webhook_id: "{{ discord_webhook_id }}"
+        webhook_token: "{{ discord_webhook_token }}"
+        content: "{{ _ovos_history_content }}"
+        username: eda-bot
+        avatar_url: "https://yt3.googleusercontent.com/b5j21DhzXf8pwokbzy60M-9ImtdC-zgKM12cenpFgRDStfGoW3qwhsI51xZ9Oy1rug6XTKXgFw=s176-c-k-c0x00ffffff-no-rj"

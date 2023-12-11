@@ -1,0 +1,23 @@
+---
+- name: Demo rules with websocket as source
+  hosts: all
+
+  sources:
+    - name: websocket
+      smartgic.eda.websocket:
+        host: localhost
+        port: 8181
+        path: /core
+
+  rules:
+    - name: Run job template
+      condition: event.type == "skill-ovos-hello-world.openvoiceos.activate"
+      action:
+        run_job_template:
+          name: ovos-history
+          organization: Smartgic
+          job_args:
+            extra_vars:
+              name: Gaëtan
+          retries: 2
+          delay: 10

@@ -1,0 +1,16 @@
+---
+- name: Demo rules with websocket as source
+  hosts: all
+
+  sources:
+    - name: websocket
+      smartgic.eda.websocket:
+        host: localhost
+        port: 8181
+        path: /core
+
+  rules:
+    - name: Check for message type
+      condition: event.type == "ovos-skill-personal.OpenVoiceOS.activate"
+      action:
+        debug:
