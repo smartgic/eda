@@ -15,7 +15,7 @@
       action:
         run_job_template:
           name: ovos-history
-          organization: Smartgic
+          organization: Default
           job_args:
             extra_vars:
               name: Gaëtan
