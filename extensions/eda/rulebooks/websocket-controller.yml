@@ -14,10 +14,10 @@
       condition: event.type == "ovos-skill-personal.OpenVoiceOS:WhoMadeYou.intent"
       action:
         run_job_template:
-          name: ovos-history
+          name: OVOS History
           organization: Default
           job_args:
             extra_vars:
-              name: Gaëtan
+              name: Gaetan
           retries: 2
           delay: 10
