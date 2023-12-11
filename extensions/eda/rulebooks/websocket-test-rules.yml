@@ -5,9 +5,9 @@
   sources:
     - name: websocket
       smartgic.eda.websocket:
-        host: localhost
-        port: 8181
-        path: /core
+        host: "{{ webspcket_host | default('127.0.0.1') }}"
+        port: "{{ webspcket_port | default(8181) }}"
+        path: "{{ webspcket_path | default('/core') }}"
 
   rules:
     - name: Check for message type
