@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars:
-    _user_name: "{{ name | default('Foo') }}"
+    _user_name: "{{ which_user | default('Foo') }}"
     _ovos_history_content: >-
       Hey {{ _user_name }}, thanks for asking about the Open Voice OS history!
 

@@ -18,6 +18,6 @@
           organization: Default
           job_args:
             extra_vars:
-              name: Gaetan
+              which_user: Gaetan
           retries: 2
           delay: 10
