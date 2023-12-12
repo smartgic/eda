@@ -40,7 +40,7 @@ async def main(queue: asyncio.Queue, args: Dict[str, Any]) -> str:
     logger = logging.getLogger()
 
     try:
-        async with websockets.connect(url) as ws:
+        async for ws in websockets.connect(url):
             logger.info("Connected to websocket")
             while True:
                 data = None
