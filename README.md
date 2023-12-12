@@ -6,9 +6,9 @@ This collection was born with the idea to group some plugins and resources that 
 
 The following plugins are included in this collection:
 
-| Name                   | Description                      |
-| ---------------------- | -------------------------------- |
-| smartgic.eda.websocket | Listen to a websocket for events |
+| Name                     | Description                      |
+| ------------------------ | -------------------------------- |
+| `smartgic.eda.websocket` | Listen to a websocket for events |
 
 ### Usage
 
@@ -40,9 +40,11 @@ A sample rulebook using `smartgic.eda.websocket` source plugin is shown below:
           delay: 10
 ```
 
-In order to pass the `extra_vars` make sure to check "Prompt on Launch" within the job template, *cf:* https://github.com/ansible/ansible-rulebook/issues/622
+In order to pass the `extra_vars` make sure to check *"Prompt on Launch"* within the job template, *cf:* https://github.com/ansible/ansible-rulebook/issues/622
 
-## Build DE (Decision Envionrment)
+## Build DE (Decision Environment)
+
+In order to get the collection build within the decision environment, please follow the steps below:
 
 ```shell
 git clone https://github.com/smartgic/eda.git
